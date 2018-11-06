@@ -6,6 +6,12 @@ public class ChildThread extends Thread{
 		super(name);
 	}
 	
+	@Override
+	public void start() {
+		super.start();
+		System.out.println("Thread start");
+	}
+	
 	public void run(){
 		System.out.println("Thread executing :: "+ Thread.currentThread().getName());
 		try {
